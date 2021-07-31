@@ -120,14 +120,16 @@ precip_delay <- flights %>%
 print(precip_delay)
 ```
 
-
-```
-2.5
 ```{r}
 
 ggplot(precip_delay, aes(x = precip, y = delay)) +
   geom_line()
+
 ```
+
+
+
+
 2.6
 ```{r}
 flights_airports <- flights %>%
@@ -137,7 +139,7 @@ flights_airports <- flights %>%
   inner_join(airports, by = c("dest" = "faa"))
 print(flights_airports)
 ```
-2.7
+2.700
 ```{r}
 ggplot(flights_airports, aes(x = lon, y = lat, color = delay, size = delay)) +
   geom_point()
